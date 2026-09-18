@@ -1,0 +1,1 @@
+document.querySelector('.burger').addEventListener('click',function(){/* handled inline */});
