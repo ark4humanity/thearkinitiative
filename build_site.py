@@ -59,6 +59,7 @@ ESSAYS = [
 VIDEOS = [
  dict(id="1oxzU3-8cw_NmTdzpb_JBh4-A7s_PBjzM", title="The Ark Initiative Vision", date="2026-09-16",
       meta="Vertical \u00b7 2:40", desc="The current canon sizzle reel: 13-pillar posters, Raising Aura, \u201cTHE ARK WAS NEVER A BOAT.\u201d Dawn's chosen site video.",
+      music="I'm the Virus in Their System",
       note="A note on the original: the opening card reads \u201cWHEN THE DESIFRT\u201d \u2014 an AI text-rendering artifact in the source video (for \u201cDESERT\u201d), preserved here exactly as released."),
  dict(id="1Y4t4A9DQDcTWbTUfnK4MfnBEcw6O50Ky", title="Ancient Wisdom (Arks 4 Humanity)", date="2024-02-24",
       meta="1920\u00d71080 \u00b7 2:43", desc="Documentary-style: ancient building and farming techniques (terracing, mudbrick) as design sources for a sustainable future. Ancestor of today's Ark."),
@@ -209,7 +210,10 @@ body.mopen nav.mob{display:flex}
 body.dark{background:var(--ink);color:#e8e4d8}
 body.light{background:var(--paper);color:var(--pink)}
 /* hero */
-.hero{text-align:center;padding:64px 0 40px}
+.hero{position:relative;text-align:center;padding:64px 0 40px;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(../img/two-ways-surviving-collapse.jpg) center 32%/cover no-repeat;opacity:.5}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(5,6,10,.62),rgba(5,6,10,.38) 45%,rgba(5,6,10,.72))}
+.hero .wrap{position:relative}
 .hero .emblem{width:min(300px,62vw);border-radius:14px;box-shadow:0 18px 60px rgba(0,0,0,.6),0 0 0 1px #2a2e37}
 .hero h1{font-size:clamp(2rem,5.5vw,3.4rem);letter-spacing:.14em;margin:26px 0 6px;color:#f5edd8}
 .hero .boat{font-size:clamp(1.15rem,3vw,1.7rem);color:var(--gold2);letter-spacing:.05em;margin:10px 0}
@@ -325,13 +329,21 @@ write("js/main.js", JS)
 
 # ---------------- HOME ----------------
 home = page("Home","index.html", f"""
-<section class="hero"><div class="wrap">
+<section class="hero"><div class="bg" role="img" aria-label="Two Ways of Surviving Collapse: Force or Continuity — Team Creation poster"></div><div class="wrap">
 <img class="emblem" src="img/logo-emblem.jpg" alt="The Ark Initiative dragon-circle emblem">
 <h1>THE ARK INITIATIVE</h1>
 <p class="boat">&ldquo;THE ARK WAS NEVER A BOAT.&rdquo;</p>
 <p class="sub">It was a living system designed to carry life through collapse. Knowledge stored in patterns, not power.</p>
 <p class="garden-line">NOT A FORTRESS. A GARDEN.</p>
 </div></section>
+
+<section class="sec doors"><div class="wrap">
+<h2>START HERE</h2>
+<p class="lede">Jenny&rsquo;s door or the dragon&rsquo;s door? Jenny shows you the garden. The dragon shows you the sky.</p>
+<div class="cards">
+<a class="card" href="field-reports.html"><img src="img/jenny-guardian.jpg" alt="Jenny, Guardian of the Garden"><div class="pad"><h3>Jenny&rsquo;s Door</h3><p>The garden &mdash; real dirt, real solar, real chickens. Ark Unit 1, as it actually runs.</p></div></a>
+<a class="card" href="videos.html"><img src="img/logo-emblem.jpg" alt="The Ark dragon-circle emblem"><div class="pad"><h3>The Dragon&rsquo;s Door</h3><p>The sky &mdash; the films, the vision reel, the dream it all points at.</p></div></a>
+</div></div></section>
 
 <section class="sec"><div class="wrap">
 <h2>TWO LAYERS, KEPT DISTINCT</h2>
@@ -434,10 +446,11 @@ for i,e in enumerate(ESSAYS):
 vblocks = []
 for v in VIDEOS:
     note = f'<p class="vnote">{v["note"]}</p>' if v.get("note") else ""
+    music = f'<p class="vnote">Music: \u201c{html.escape(v["music"])}\u201d</p>' if v.get("music") else ""
     vert = " vert" if v["id"]=="1oxzU3-8cw_NmTdzpb_JBh4-A7s_PBjzM" else ""
     vblocks.append(f"""<div class="vid{vert}">
 <iframe src="https://drive.google.com/file/d/{v['id']}/preview" allow="autoplay; encrypted-media" allowfullscreen title="{html.escape(v['title'])}"></iframe>
-<div class="vpad"><h3>{html.escape(v['title'])}</h3><p class="vmeta">{html.escape(v['date'])} &middot; {html.escape(v['meta'])}</p><p>{v['desc']}</p>{note}</div></div>""")
+<div class="vpad"><h3>{html.escape(v['title'])}</h3><p class="vmeta">{html.escape(v['date'])} &middot; {html.escape(v['meta'])}</p><p>{v['desc']}</p>{music}{note}</div></div>""")
 videos = page("Videos","videos.html", f"""
 <section class="sec"><div class="wrap">
 <h2>VIDEOS</h2>
