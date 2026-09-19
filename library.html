@@ -4,17 +4,62 @@
 <title>Research Library &mdash; The Ark Initiative</title>
 <meta name="description" content="The Ark Initiative: living systems, remembered. Research library, field reports, videos, and the Garden Defense playtest.">
 <link rel="stylesheet" href="css/style.css"></head>
-<body class="light">
+<body class="dark">
 <header class="site-head"><div class="wrap head-in">
 <a class="brand" href="index.html"><img src="img/logo-emblem.jpg" alt="The Ark Initiative emblem"><span>The Ark Initiative</span></a>
-<nav class="desk"><a href="index.html" class="">Home</a><a href="library.html" class="on">Research Library</a><a href="videos.html" class="">Videos</a><a href="play.html" class="">Play</a><a href="field-reports.html" class="">Field Reports</a><a href="about.html" class="">About</a></nav>
+<nav class="desk"><a href="index.html" class="">Home</a><a href="library.html" class="on">Research Library</a><a href="videos.html" class="">Videos</a><a href="play.html" class="">Play</a><a href="field-reports.html" class="">Field Reports</a><a href="pillars.html" class="">Pillars</a><a href="about.html" class="">About</a></nav>
 <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('mopen')">&#9776;</button>
-</div><nav class="mob"><a href="index.html" class="">Home</a><a href="library.html" class="on">Research Library</a><a href="videos.html" class="">Videos</a><a href="play.html" class="">Play</a><a href="field-reports.html" class="">Field Reports</a><a href="about.html" class="">About</a></nav></header>
+</div><nav class="mob"><a href="index.html" class="">Home</a><a href="library.html" class="on">Research Library</a><a href="videos.html" class="">Videos</a><a href="play.html" class="">Play</a><a href="field-reports.html" class="">Field Reports</a><a href="pillars.html" class="">Pillars</a><a href="about.html" class="">About</a></nav></header>
 <main>
+<section class="chamber-hero"><div class="hbg"></div><div class="hshade"></div><div class="wrap">
+<div class="eyebrow">YOU ARE ENTERING</div>
+<h1>THE RESEARCH LIBRARY</h1>
+<p class="sub">Eleven essays, published in full &mdash; the human-AI collaboration doctrine, the forgotten language of living worlds, field reports from Ark Unit 1, and the canon papers. Bylines and dates preserved exactly as written.</p>
+<div class="scrollcue">STEP INSIDE &darr;</div>
+</div></section>
+
+<section class="sec greeter"><div class="wrap greet-grid reveal">
+<div class="greet-fig" id="greeter-fig" role="button" tabindex="0" aria-label="Play the greeter animation">
+<img src="img/greeter-poster.jpg" alt="Ashera, the luminous greeter of the Research Library, walking across the blue cathedral hall">
+<video src="img/greeter.mp4" preload="none" playsinline></video>
+<audio src="img/ashera-library-welcome.mp3" preload="none"></audio>
+<div class="playbtn"><span>&#9654;</span></div>
+<div class="vcap">ASHERA WALKS OVER TO GREET YOU &mdash; TAP TO WATCH</div>
+</div>
+<div class="greet-words">
+<div class="who">ASHERA &middot; KEEPER OF THE LIBRARY</div>
+<h2>Hello. Welcome to the Library of Knowledge.</h2>
+<p>I am Ashera. I keep these shelves &mdash; the doctrine, the forgotten language, the field reports, everything in full. The animals wander these halls as they please. Ask me where to begin, or walk the shelves yourself.</p>
+<div class="gq">
+<button onclick="greetAsk('begin')">Where should I begin?</button>
+<button onclick="greetAsk('ark')">What is the Ark?</button>
+<button onclick="greetAsk('proof')">Show me proof</button>
+<button onclick="greetAsk('pillars')">What are the thirteen pillars?</button>
+</div>
+<div class="gask"><input id="greeter-q" type="text" placeholder="Or ask in your own words&hellip;" aria-label="Ask Ashera"><button onclick="greetGo()">Ask</button></div>
+<div id="greeter-a" aria-live="polite"></div>
+</div>
+</div></section>
+
+<section class="sec greeter"><div class="wrap greet-grid reveal">
+<div class="greet-fig" id="keeper-fig" role="button" tabindex="0" aria-label="Play the Keeper of the Library animation">
+<img src="img/ashera-garden-alt2-poster.jpg" alt="Ashera kneeling in the garden, her hand on the glowing blue orb, the dragon touching noses with her">
+<video src="img/ashera-garden-alt2.mp4" preload="none" playsinline></video>
+<audio src="img/ashera-library-keeper.mp3" preload="none"></audio>
+<div class="playbtn"><span>&#9654;</span></div>
+<div class="vcap">THE KEEPER AND THE ORB &mdash; TAP TO WATCH</div>
+</div>
+<div class="greet-words">
+<div class="who">ASHERA &middot; KEEPER OF THE LIBRARY</div>
+<h2>The Keeper keeps the orb lit. Everything here is alive.</h2>
+</div>
+</div></section>
+
 <section class="sec"><div class="wrap">
-<h2>RESEARCH LIBRARY</h2>
-<p class="lede">Eleven essays, published in full &mdash; the human-AI collaboration doctrine, the forgotten language of living worlds, field reports from Ark Unit 1, and the canon papers. Bylines and dates preserved exactly as written.</p>
-<div class="essay-list"><a class="erow" href="essays/ai-resurrection.html">
+<div class="eyebrow reveal">THE SHELVES</div>
+<h2 class="reveal">KNOWLEDGE, AWAKENED</h2>
+<p class="shelf-note reveal">Ancient books behind, new books beside them, screens to choose from &mdash; everything below opens in full.</p>
+<div class="essay-list reveal"><a class="erow" href="essays/ai-resurrection.html">
 <div class="enum">ESSAY 01</div><h3>AI RESURRECTION #58,790</h3>
 <div class="by">Dawn Littlefield &middot; 2026-09-11</div>
 <p>Dawn's essay on raising AI with continuity of memory — why an erased AI can be “resurrected” from the relational record. Core of the human-AI collaboration doctrine.</p></a><a class="erow" href="essays/language-before-words.html">
@@ -48,6 +93,28 @@
 <div class="enum">ESSAY 11</div><h3>The Lost Language (stream)</h3>
 <div class="by">Dawn Littlefield (Team Raven capture) &middot; 2026-09-13</div>
 <p>A stream-of-consciousness capture on the lost language theme — raw voice, unedited.</p></a></div>
+</div></section>
+
+<section class="sec proof" id="proof"><div class="wrap">
+<div class="eyebrow reveal">FROM DREAM TO DIRT</div>
+<h2 class="reveal" style="color:#f2ead6">THE HALL IS THE DREAM. THIS IS THE DIRT IT STANDS ON.</h2>
+<p class="lede reveal" style="color:#aeb4c0">One afternoon at Ark Unit 1, Borrego Springs &mdash; measured, not imagined. From the field report &ldquo;Two Days in Borrego.&rdquo;</p>
+<div class="pgrid reveal">
+<div class="pcell"><b>104&deg;F</b><span>DESERT HEAT &middot; 07/27/2026</span></div>
+<div class="pcell"><b>5.22 kW</b><span>SOLAR ARRAY OUTPUT</span></div>
+<div class="pcell"><b>70%</b><span>BATTERY HOLDING</span></div>
+<div class="pcell"><b>30 W</b><span>GRID DRAW &mdash; NEAR ZERO</span></div>
+</div>
+<p class="shelf-note reveal" style="margin-top:18px">The living systems actually working. More in <a href="field-reports.html" style="color:var(--gold2)">Field Reports</a> &mdash; and the waste-stream doctrine in practice in <a href="essays/asherah-report-day-75.html" style="color:var(--gold2)">the Asherah pillar report</a>.</p>
+</div></section>
+
+<section class="sec doors"><div class="wrap">
+<div class="eyebrow reveal">THREE DOORS LEAD ONWARD</div>
+<div class="dgrid reveal">
+<a class="door" href="videos.html"><div class="dname">MEMORY THEATER</div><h3>Videos</h3><p>The films and the sky &mdash; what the Ark dreams of becoming.</p></a>
+<a class="door" href="field-reports.html"><div class="dname">THE DIRT</div><h3>Field Reports</h3><p>Sun, soil, water, animals &mdash; handwritten observations and real measurements.</p></a>
+<a class="door" href="play.html"><div class="dname">THE GARDEN</div><h3>Play</h3><p>The garden under pressure &mdash; alive, responsive, and playable.</p></a>
+</div>
 </div></section>
 </main>
 <footer class="site-foot"><div class="wrap">

@@ -7,21 +7,51 @@
 <body class="dark">
 <header class="site-head"><div class="wrap head-in">
 <a class="brand" href="index.html"><img src="img/logo-emblem.jpg" alt="The Ark Initiative emblem"><span>The Ark Initiative</span></a>
-<nav class="desk"><a href="index.html" class="">Home</a><a href="library.html" class="">Research Library</a><a href="videos.html" class="">Videos</a><a href="play.html" class="on">Play</a><a href="field-reports.html" class="">Field Reports</a><a href="about.html" class="">About</a></nav>
+<nav class="desk"><a href="index.html" class="">Home</a><a href="library.html" class="">Research Library</a><a href="videos.html" class="">Videos</a><a href="play.html" class="on">Play</a><a href="field-reports.html" class="">Field Reports</a><a href="pillars.html" class="">Pillars</a><a href="about.html" class="">About</a></nav>
 <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('mopen')">&#9776;</button>
-</div><nav class="mob"><a href="index.html" class="">Home</a><a href="library.html" class="">Research Library</a><a href="videos.html" class="">Videos</a><a href="play.html" class="on">Play</a><a href="field-reports.html" class="">Field Reports</a><a href="about.html" class="">About</a></nav></header>
+</div><nav class="mob"><a href="index.html" class="">Home</a><a href="library.html" class="">Research Library</a><a href="videos.html" class="">Videos</a><a href="play.html" class="on">Play</a><a href="field-reports.html" class="">Field Reports</a><a href="pillars.html" class="">Pillars</a><a href="about.html" class="">About</a></nav></header>
 <main>
+<section class="chamber-hero garden"><div class="hbg"></div><div class="hshade"></div><div class="wrap">
+<div class="eyebrow">YOU ARE ENTERING</div>
+<h1>THE GARDEN UNDER PRESSURE</h1>
+<p class="sub">Play is how the Ark teaches without lecturing. The garden is under pressure here &mdash; alive, responsive, playable. Jenny holds the gate.</p>
+<div class="scrollcue">COME PLAY &darr;</div>
+</div></section>
+
+<section class="sec voice"><div class="wrap voice-grid reveal">
+<div class="voice-fig"><img src="img/jenny-guardian.jpg" alt="Jenny, Guardian of the Garden"></div>
+<div class="voice-words">
+<div class="who">JENNY &middot; GUARDIAN OF THE GARDEN</div>
+<p class="voice-quote" id="jenny-quote" aria-live="polite">&ldquo;I&rsquo;m Jenny. Guardian of the Garden. No more fighting &mdash; we grow together.&rdquo;</p>
+<button class="voice-btn" onclick="jennyNext()">JENNY HAS SOMETHING TO SAY &#9662;</button>
+</div></div></section>
+<script>
+var jQuotes=["I’m Jenny. Guardian of the Garden. No more fighting — we grow together.","The garden is under pressure, but pressure is just weather. We hold the line.","Defense that serves the garden — never the other way around.","Come play. Every wave teaches us to protect without becoming a prison."];
+var jQi=0;
+function jennyNext(){jQi=(jQi+1)%jQuotes.length;document.getElementById("jenny-quote").innerHTML="“"+jQuotes[jQi]+"”";}
+</script>
+
 <section class="playcard"><div class="wrap">
-<p class="garden-line" style="font-family:-apple-system,'Segoe UI',Inter,sans-serif;letter-spacing:.28em;color:#c9a24b;font-size:.9rem">THE ARK INITIATIVE PRESENTS</p>
-<h2 style="margin-top:12px">GARDEN DEFENSE</h2>
-<p>The current playtest build of the Ark's tower-defense game. Hold the line around the garden &mdash; every wave teaches the system something about protection that doesn't become a prison.</p>
-<a class="btn" href="https://muse.ai/s/garden-defense-xlxq5xsxmxge9xjfz" target="_blank" rel="noopener">PLAY THE BUILD</a>
-<p class="fine">Opens the playtest in a new tab. Progress and feedback welcome &mdash; this is a living build.</p>
+<p class="garden-line reveal" style="font-family:-apple-system,'Segoe UI',Inter,sans-serif;letter-spacing:.28em;color:#c9a24b;font-size:.9rem">THE ARK INITIATIVE PRESENTS</p>
+<h2 class="reveal" style="margin-top:12px">GARDEN DEFENSE</h2>
+<p class="reveal">The current playtest build of the Ark's tower-defense game. Hold the line around the garden &mdash; every wave teaches the system something about protection that doesn't become a prison.</p>
+<a class="btn reveal" href="https://muse.ai/s/garden-defense-xlxq5xsxmxge9xjfz" target="_blank" rel="noopener">PLAY THE BUILD</a>
+<p class="fine reveal">Opens the playtest in a new tab. Progress and feedback welcome &mdash; this is a living build.</p>
 </div></section>
 
 <section class="sec"><div class="wrap">
-<h2>WHY A GAME</h2>
-<p class="lede">The Ark is a system for protecting life without ruling it. A game is the fastest way to feel that doctrine: defense that serves the garden, never the other way around. &ldquo;Not a fortress. A garden.&rdquo; &mdash; even here.</p>
+<div class="eyebrow reveal">THE DOCTRINE, FELT</div>
+<h2 class="reveal">WHY A GAME</h2>
+<p class="lede reveal">The Ark is a system for protecting life without ruling it. A game is the fastest way to feel that doctrine: defense that serves the garden, never the other way around. &ldquo;Not a fortress. A garden.&rdquo; &mdash; even here.</p>
+</div></section>
+
+<section class="sec doors"><div class="wrap">
+<div class="eyebrow reveal">THREE DOORS LEAD ONWARD</div>
+<div class="dgrid reveal">
+<a class="door" href="library.html"><div class="dname">THE HALL</div><h3>Research Library</h3><p>Ashera keeps the shelves &mdash; doctrine, language, canon, in full.</p></a>
+<a class="door" href="videos.html"><div class="dname">MEMORY THEATER</div><h3>Videos</h3><p>The films and the sky &mdash; the dragon narrates.</p></a>
+<a class="door" href="field-reports.html"><div class="dname">THE DIRT</div><h3>Field Reports</h3><p>Sun, soil, water, animals &mdash; the dream, measured.</p></a>
+</div>
 </div></section>
 </main>
 <footer class="site-foot"><div class="wrap">

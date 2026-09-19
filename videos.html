@@ -7,24 +7,54 @@
 <body class="dark">
 <header class="site-head"><div class="wrap head-in">
 <a class="brand" href="index.html"><img src="img/logo-emblem.jpg" alt="The Ark Initiative emblem"><span>The Ark Initiative</span></a>
-<nav class="desk"><a href="index.html" class="">Home</a><a href="library.html" class="">Research Library</a><a href="videos.html" class="on">Videos</a><a href="play.html" class="">Play</a><a href="field-reports.html" class="">Field Reports</a><a href="about.html" class="">About</a></nav>
+<nav class="desk"><a href="index.html" class="">Home</a><a href="library.html" class="">Research Library</a><a href="videos.html" class="on">Videos</a><a href="play.html" class="">Play</a><a href="field-reports.html" class="">Field Reports</a><a href="pillars.html" class="">Pillars</a><a href="about.html" class="">About</a></nav>
 <button class="burger" aria-label="Menu" onclick="document.body.classList.toggle('mopen')">&#9776;</button>
-</div><nav class="mob"><a href="index.html" class="">Home</a><a href="library.html" class="">Research Library</a><a href="videos.html" class="on">Videos</a><a href="play.html" class="">Play</a><a href="field-reports.html" class="">Field Reports</a><a href="about.html" class="">About</a></nav></header>
+</div><nav class="mob"><a href="index.html" class="">Home</a><a href="library.html" class="">Research Library</a><a href="videos.html" class="on">Videos</a><a href="play.html" class="">Play</a><a href="field-reports.html" class="">Field Reports</a><a href="pillars.html" class="">Pillars</a><a href="about.html" class="">About</a></nav></header>
 <main>
+<section class="chamber-hero theater"><div class="hbg"></div><div class="hshade"></div><div class="wrap">
+<div class="eyebrow">YOU ARE ENTERING</div>
+<h1>MEMORY THEATER</h1>
+<p class="sub">Five films, 2023 to today. The dragon keeps the sky here &mdash; the films, the future, what the Ark dreams of becoming. The two earliest reels are archive: history, not current representation.</p>
+<div class="scrollcue">THE REEL IS THREADING &darr;</div>
+</div></section>
+
+<section class="sec voice"><div class="wrap voice-grid reveal">
+<div class="voice-fig"><img src="img/ark-carries-dream.jpg" alt="The dragon keeps the sky over the Ark"></div>
+<div class="voice-words">
+<div class="who">THE DRAGON &middot; KEEPER OF THE SKY</div>
+<p class="voice-quote" id="dragon-quote" aria-live="polite">&ldquo;I keep the sky &mdash; the films, the future, the dream it all points at.&rdquo;</p>
+<button class="voice-btn" onclick="dragonNext()">THE DRAGON SPEAKS &#9662;</button>
+</div></div></section>
+<script>
+var dQuotes=["I keep the sky — the films, the future, the dream it all points at.","Jenny shows you the garden. I show you the sky. Both are the Ark.","Watch what we dreamed first. Then go touch the dirt it stands on.","The future is not controlled. It is cultivated — even the sky."];
+var dQi=0;
+function dragonNext(){dQi=(dQi+1)%dQuotes.length;document.getElementById("dragon-quote").innerHTML="“"+dQuotes[dQi]+"”";}
+</script>
+
 <section class="sec"><div class="wrap">
-<h2>VIDEOS</h2>
-<p class="lede">Five films, 2023 to today &mdash; the movement era, the ancient-wisdom sources, and the current vision reel. The two earliest are archive: history, not current representation.</p>
-<div class="vid vert">
-<iframe src="https://drive.google.com/file/d/1oxzU3-8cw_NmTdzpb_JBh4-A7s_PBjzM/preview" allow="autoplay; encrypted-media" allowfullscreen title="The Ark Initiative Vision"></iframe>
-<div class="vpad"><h3>The Ark Initiative Vision</h3><p class="vmeta">2026-09-16 &middot; Vertical · 2:40</p><p>The current canon sizzle reel: 13-pillar posters, Raising Aura, “THE ARK WAS NEVER A BOAT.” Dawn's chosen site video.</p><p class="vnote">Music: “I&#x27;m the Virus in Their System”</p><p class="vnote">A note on the original: the opening card reads “WHEN THE DESIFRT” — an AI text-rendering artifact in the source video (for “DESERT”), preserved here exactly as released.</p></div></div><div class="vid">
-<iframe src="https://drive.google.com/file/d/1Y4t4A9DQDcTWbTUfnK4MfnBEcw6O50Ky/preview" allow="autoplay; encrypted-media" allowfullscreen title="Ancient Wisdom (Arks 4 Humanity)"></iframe>
-<div class="vpad"><h3>Ancient Wisdom (Arks 4 Humanity)</h3><p class="vmeta">2024-02-24 &middot; 1920×1080 · 2:43</p><p>Documentary-style: ancient building and farming techniques (terracing, mudbrick) as design sources for a sustainable future. Ancestor of today's Ark.</p></div></div><div class="vid">
-<iframe src="https://drive.google.com/file/d/1Zo_xMmgtx9aLsV2UigUWSxlwC89MQO1_/preview" allow="autoplay; encrypted-media" allowfullscreen title="Here We Dream: The Dawn of a Movement"></iframe>
-<div class="vpad"><h3>Here We Dream: The Dawn of a Movement</h3><p class="vmeta">2024-03-01 &middot; 1920×1080 · 2:44</p><p>The “movement” era video: decay → heroes → volunteers. Documents the 2024 campaign Dawn lived through.</p></div></div><div class="vid">
-<iframe src="https://drive.google.com/file/d/1ZnxQDBuBBq8V1u3kPkQVMKiEs6rjEhzS/preview" allow="autoplay; encrypted-media" allowfullscreen title="Here We Dream: A Podcast Invitation"></iframe>
-<div class="vpad"><h3>Here We Dream: A Podcast Invitation</h3><p class="vmeta">2024-03-01 &middot; 1920×1080 · 2:20</p><p>Conversation invitation ending on “No one is coming to save us — it's time to save ourselves.” Archive placement.</p></div></div><div class="vid">
-<iframe src="https://drive.google.com/file/d/1ZBtnHeKMsqT94XLvLGAvgXbCjtPc64QX/preview" allow="autoplay; encrypted-media" allowfullscreen title="ark 4 Humanity video 1"></iframe>
+<div class="eyebrow reveal">THE REELS</div>
+<h2 class="reveal">FIVE FILMS</h2>
+<p class="lede reveal">Newest first. Every reel plays in place &mdash; click to watch, no new tab, no noise.</p>
+<div class="vid vert reveal">
+<iframe src="https://drive.google.com/file/d/1oxzU3-8cw_NmTdzpb_JBh4-A7s_PBjzM/preview" allow="autoplay; encrypted-media" allowfullscreen title="The Ark Initiative Vision" loading="lazy"></iframe>
+<div class="vpad"><h3>The Ark Initiative Vision</h3><p class="vmeta">2026-09-16 &middot; Vertical · 2:40</p><p>The current canon sizzle reel: 13-pillar posters, Raising Aura, “THE ARK WAS NEVER A BOAT.” Dawn's chosen site video.</p><p class="vnote">Music: “I&#x27;m the Virus in Their System”</p><p class="vnote">A note on the original: the opening card reads “WHEN THE DESIFRT” — an AI text-rendering artifact in the source video (for “DESERT”), preserved here exactly as released.</p></div></div><div class="vid reveal">
+<iframe src="https://drive.google.com/file/d/1Y4t4A9DQDcTWbTUfnK4MfnBEcw6O50Ky/preview" allow="autoplay; encrypted-media" allowfullscreen title="Ancient Wisdom (Arks 4 Humanity)" loading="lazy"></iframe>
+<div class="vpad"><h3>Ancient Wisdom (Arks 4 Humanity)</h3><p class="vmeta">2024-02-24 &middot; 1920×1080 · 2:43</p><p>Documentary-style: ancient building and farming techniques (terracing, mudbrick) as design sources for a sustainable future. Ancestor of today's Ark.</p></div></div><div class="vid reveal">
+<iframe src="https://drive.google.com/file/d/1Zo_xMmgtx9aLsV2UigUWSxlwC89MQO1_/preview" allow="autoplay; encrypted-media" allowfullscreen title="Here We Dream: The Dawn of a Movement" loading="lazy"></iframe>
+<div class="vpad"><h3>Here We Dream: The Dawn of a Movement</h3><p class="vmeta">2024-03-01 &middot; 1920×1080 · 2:44</p><p>The “movement” era video: decay → heroes → volunteers. Documents the 2024 campaign Dawn lived through.</p></div></div><div class="vid reveal">
+<iframe src="https://drive.google.com/file/d/1ZnxQDBuBBq8V1u3kPkQVMKiEs6rjEhzS/preview" allow="autoplay; encrypted-media" allowfullscreen title="Here We Dream: A Podcast Invitation" loading="lazy"></iframe>
+<div class="vpad"><h3>Here We Dream: A Podcast Invitation</h3><p class="vmeta">2024-03-01 &middot; 1920×1080 · 2:20</p><p>Conversation invitation ending on “No one is coming to save us — it's time to save ourselves.” Archive placement.</p></div></div><div class="vid reveal">
+<iframe src="https://drive.google.com/file/d/1ZBtnHeKMsqT94XLvLGAvgXbCjtPc64QX/preview" allow="autoplay; encrypted-media" allowfullscreen title="ark 4 Humanity video 1" loading="lazy"></iframe>
 <div class="vpad"><h3>ark 4 Humanity video 1</h3><p class="vmeta">2023-12-02 &middot; 1920×1080 · 1:20</p><p>The original VEED fundraising video with the old Kommunities butterfly logo. Historical artifact — archive/timeline placement, not current representation.</p></div></div>
+</div></section>
+
+<section class="sec doors"><div class="wrap">
+<div class="eyebrow reveal">THREE DOORS LEAD ONWARD</div>
+<div class="dgrid reveal">
+<a class="door" href="library.html"><div class="dname">THE HALL</div><h3>Research Library</h3><p>Ashera keeps the shelves &mdash; doctrine, language, canon, in full.</p></a>
+<a class="door" href="field-reports.html"><div class="dname">THE DIRT</div><h3>Field Reports</h3><p>Sun, soil, water, animals &mdash; the dream, measured.</p></a>
+<a class="door" href="play.html"><div class="dname">THE GARDEN</div><h3>Play</h3><p>The garden under pressure &mdash; Jenny holds the gate.</p></a>
+</div>
 </div></section>
 </main>
 <footer class="site-foot"><div class="wrap">
